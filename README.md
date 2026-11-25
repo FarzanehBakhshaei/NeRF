@@ -12,6 +12,13 @@ I'm developing and training on a MacBook (Apple M4 Pro) using PyTorch's MPS back
 
 Still a work in progress.
 
+
+### Phase 1: Cameras and rays
+The 100 training cameras of the Lego dataset sit on a dome around the object.
+Each camera shoots one ray per pixel; here 5 rays (4 image corners + center) from a few cameras are visualized.
+
+![Cameras around Lego](assets/Cameras_around_Lego.png)
+
 ## Setup
 
 ```bash

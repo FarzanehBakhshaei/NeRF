@@ -24,8 +24,8 @@ class Camera:
                 -(y - self.height/2) / self.focal,  # - : top lines positive, bottom line negative
                 -torch.ones_like(x)     # camera looks along -z, so one step forward is -1 
         ], dim = -1) # dim=-1 puts each x,y,z together 
-        #dim= 1  →  each line keeps the tables apart:   [x,x,x]  [y,y,y]  [z,z,z]
-        #dim=-1 →  each pixel gets its own triple:     [x,y,z]  [x,y,z]  [x,y,z]
+        #dim= 1  ->  each line keeps the tables apart:   [x,x,x]  [y,y,y]  [z,z,z]
+        #dim=-1 ->  each pixel gets its own triple:     [x,y,z]  [x,y,z]  [x,y,z]
         #
 
         # rays in world space
