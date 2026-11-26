@@ -19,6 +19,14 @@ Each camera shoots one ray per pixel; here 5 rays (4 image corners + center) fro
 
 ![Cameras around Lego](assets/Cameras_around_Lego.png)
 
+
+### Phase 2: Fitting one image without positional encoding
+Made an MLP of 4 hidden layers each with 256 nodes to learn a single Lego image as a function (x, y) → (r, g, b).
+As the model learns low frequency inputs fast and high frequency inputs slow, the learned image is blurred. In fact it only learns the coarse shapes and colors but the fine details stay blurry.
+
+![Fit without positional encoding](assets/Target_vs_learned_without_PE.png)
+
+
 ## Setup
 
 ```bash
